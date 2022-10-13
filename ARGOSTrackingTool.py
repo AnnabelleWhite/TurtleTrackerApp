@@ -44,7 +44,7 @@ for lineString in line_list:
     
     #Add items to dictionaries
     date_dict[record_id] = obs_date
-    location_dict[record_id] = obs_lc
+    location_dict[record_id] = (obs_lat, obs_lon)
     
     #Print information to the user
     print(f'Record {record_id} indicates Sara was seet and {obs_lat}N, {obs_lon}W  on {obs_date}. ')
