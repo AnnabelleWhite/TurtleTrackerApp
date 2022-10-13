@@ -42,10 +42,12 @@ for lineString in line_list:
     obs_lat = lineData[6]
     obs_lon = lineData[7]
     
-    #Add items to dictionaries
-    date_dict[record_id] = obs_date
-    location_dict[record_id] = (obs_lat, obs_lon)
-    
-    #Print information to the user
-    print(f'Record {record_id} indicates Sara was seet and {obs_lat}N, {obs_lon}W  on {obs_date}. ')
+    if obs_lc in ("1","2","3"):
+        
+        #Add items to dictionaries
+        date_dict[record_id] = obs_date
+        location_dict[record_id] = (obs_lat, obs_lon)
+        
+        #Print information to the user
+        print(f'Record {record_id} indicates Sara was seet and {obs_lat}N, {obs_lon}W  on {obs_date}. ')
     
